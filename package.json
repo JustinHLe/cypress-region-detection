@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:version": "yarn cypress --version"
+    "cy:version": "yarn cypress --version",
+    "cy:open": "yarn cypress open"
   },
   "keywords": [],
   "author": "",
