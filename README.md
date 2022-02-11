@@ -17,11 +17,15 @@ actual human being.
 
    - 
 
-2. Open a command line 
+2. Open command line 
    
    - Mac users 
         - open spotlight search with [command + space] and search for terminal and click on the first result(Terminal)
    
    - Window users 
         - open the run command by pressing [Windows Key + R] simultaneously and then typing [cmd] and hitting [ok]
+
+3. make a directory and cd into it 
+
+
 
