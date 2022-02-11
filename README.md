@@ -11,10 +11,16 @@ actual human being.
 
 # Installation
 
-1. Open a command line 
+1. Install Git
+
+   - Mac users should already have git installed
+
+   - 
+
+2. Open a command line 
    
    - Mac users 
-        - open spotlight search with [command + space] and search for terminal and click on 
+        - open spotlight search with [command + space] and search for terminal and click on the first result(Terminal)
    
    - Window users 
         - open the run command by pressing [Windows Key + R] simultaneously and then typing [cmd] and hitting [ok]
