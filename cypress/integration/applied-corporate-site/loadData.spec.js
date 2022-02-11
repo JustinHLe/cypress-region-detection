@@ -17,14 +17,40 @@ describe("Generate Data for tests", () => {
     describe('Grab HCP Country name and IP', () => {
         HCPCountries.countries.forEach(item => {
             it('gets ip from each country', ()=> {
-                cy.request(`https://cdn-lite.ip2location.com/datasets/${item.code}.json?_=1644535918229`).then(res => {
-                    HCPCountryData.HCPCountryData.countries.push({
-                        country: item.name,
-                        ip: res.body.data[0][0]
+                cy.request(`https://www.nirsoft.net/countryip/${item.code.toLowerCase()}.html`).then(res => {
+                    const ip = res.body.match(/([0-9]{1,3}\.)([0-9]{1,3}\.)([0-9]{1,3}\.)([0-9]{1,3})/g)
+                    cy.log(ip)
+                    cy.request(`http://ipwhois.app/json/${ip[0]}`).then(res => {
+                        cy.log(res.body.country_code)
+                        cy.log(item.code)
+                        if(res.body.country_code === item.code){
+                            HCPCountryData.HCPCountryData.countries.push({
+                                country: item.name,
+                                ip: ip[0]
+                            })
+                        } else {
+                            function testIps(index = 1){
+                                if(index > ip.length){
+                                    return
+                                }
+                                cy.request(`http://ipwhois.app/json/${ip[index]}`).then(res => {
+                                    if(res.body.country_code === item.code){
+                                        HCPCountryData.HCPCountryData.countries.push({
+                                            country: item.name,
+                                            ip: ip[index]
+                                        })
+                                    } else {
+                                        testIps(index + 1)
+                                    }
+                                })
+                            }
+                            testIps()
+                        }
                     })
                 })
             })
         })
+        
         it("writes HCPCountryData to file", () => {
             cy.writeFile('./cypress/fixtures/HCPCountryIPs.json', JSON.stringify(HCPCountryData))
         })
@@ -33,10 +59,11 @@ describe("Generate Data for tests", () => {
     describe('Grab Non-HCP Country name and IP', () => {
         NonHCPCountries.countries.forEach(item => {
             it('gets ip from each country', ()=> {
-                cy.request(`https://cdn-lite.ip2location.com/datasets/${item.code}.json?_=1644535918229`).then(res => {
+                cy.request(`https://www.nirsoft.net/countryip/${item.code.toLowerCase()}.html`).then(res => {
+                    const ip = res.body.match(/([0-9]{1,3}\.)([0-9]{1,3}\.)([0-9]{1,3}\.)([0-9]{1,3})/)
                     NonHCPCountryData.NonHCPCountryData.countries.push({
                         country: item.name,
-                        ip: res.body.data[0][0]
+                        ip: ip[0]
                     })
                 })
             })
