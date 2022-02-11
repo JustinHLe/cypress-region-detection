@@ -1,0 +1,15 @@
+{
+    "NonHCPCountries": {
+        "countries": [
+            {"name": "Germany", "code": "DE"}, 
+            {"name": "United Kingdom", "code": "GB"}, 
+            {"name": "Netherlands", "code": "NL"}, 
+            {"name": "Norway", "code": "NO"}, 
+            {"name": "Ireland", "code": "IE"}, 
+            {"name": "Sweden", "code": "SE"}, 
+            {"name": "Finland", "code": "FI"}, 
+            {"name": "Poland", "code": "PL"}, 
+            {"name": "Luxembourg", "code": "LU"}
+        ]
+    }
+}
