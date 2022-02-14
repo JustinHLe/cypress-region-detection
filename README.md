@@ -14,7 +14,7 @@ since it is the only page that has geolocation and shows content based on region
 
 # Installation
 
-1. Install Git
+# 1. Install Git
 
    - Mac users 
       - Skip to step 2 and open the terminal first
@@ -29,7 +29,7 @@ since it is the only page that has geolocation and shows content based on region
       
       ![Image](/ReadMeImages/Windows/1.PNG)
 
-2. Open command line 
+# 2. Open command line 
    
    - Mac users 
         - open spotlight search with [command + space] and search for terminal and click on the first result(Terminal)
@@ -41,10 +41,12 @@ since it is the only page that has geolocation and shows content based on region
 
    ![image](/ReadMeImages/Windows/2.png)
 
-3. make a directory 
+# 3. Make a directory 
 
    - Mac users 
         - Follow window instructions
+        ![Image](/ReadMeImages/Mac/4.png)
+        ![Image](/ReadMeImages/Mac/5.png)
 
    - Window users 
         - Run command mkdir [directory name]. The directory name can by anyting you like.
@@ -53,10 +55,11 @@ since it is the only page that has geolocation and shows content based on region
         
         ![image](/ReadMeImages/Windows/4.PNG)
 
-4. Clone the repository
+# 4. Clone the repository
 
    - Mac users 
         - Follow window instructions
+         ![Image](/ReadMeImages/Mac/6.png)
 
    - Window users 
         - Go to https://github.com/JustinHLe/cypress-region-detection, click the GREEN Code button in the right corner of the screen
@@ -68,10 +71,12 @@ since it is the only page that has geolocation and shows content based on region
 
    ![image](/ReadMeImages/Windows/6.PNG)
 
-5. Install project dependencies
+# 5. Install project dependencies
 
    - Mac users 
         - Follow window instructions
+        ![Image](/ReadMeImages/Mac/7.png)
+        ![Image](/ReadMeImages/Mac/8.png)
 
    - Window users 
         - After it is cloned it should create a new folder called cypress-region-detection
@@ -79,15 +84,21 @@ since it is the only page that has geolocation and shows content based on region
 
    ![image](/ReadMeImages/Windows/7.PNG)
    
-     - Once inside the cypress-region-detection folder, type yarn install the terminal to install project dependencies
+  - Once inside the cypress-region-detection folder, type yarn install the terminal to install project dependencies
 
    ![image](/ReadMeImages/Windows/8.PNG)
 
-6. Run cypress
+# 6. Run cypress
 
    - Mac users 
         - Follow window instructions
 
+      ![Image](/ReadMeImages/Mac/9.png)
+
+      ![Image](/ReadMeImages/Mac/10.png)
+      
+      ![Image](/ReadMeImages/Mac/11.png)
+      
    - Window users 
         - There are multiple ways to run cypress. 
         - The simplest way is to run cypress with the script already written.
