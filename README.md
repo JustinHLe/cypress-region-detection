@@ -22,7 +22,7 @@ since it is the only page that has geolocation and shows content based on region
       -  Go to this link, https://git-scm.com/download/win, and install the most latest version of Git for windows.
       -  Open the installer and follow the instructions. (You don't have to change anything if prompted to, just hit next throughout the installation).
       
-      ![image][/ReadMeImages/Windows/1.png]
+      ![image](/ReadMeImages/Windows/1.png)
 
 2. Open command line 
    
@@ -33,7 +33,7 @@ since it is the only page that has geolocation and shows content based on region
         - If Git is installed correctly open the search bar in the taskbar and search for git bash.
         - Open the application git bash.
 
-   ![image][/ReadMeImages/Windows/2.png]
+   ![image](/ReadMeImages/Windows/2.png)
 
 3. make a directory 
 
@@ -44,6 +44,9 @@ since it is the only page that has geolocation and shows content based on region
         - Run command mkdir [directory name]. The directory name can by anyting you like.
         - Go into the directory you just created with cd [directory name]. 
 
+      ![image](/ReadMeImages/Windows/3.png)
+      ![image](/ReadMeImages/Windows/4.png)
+
 4. Clone the repository
 
    - Mac users 
@@ -51,8 +54,13 @@ since it is the only page that has geolocation and shows content based on region
 
    - Window users 
         - Go to https://github.com/JustinHLe/cypress-region-detection, click the GREEN Code button in the right corner of the screen
+
+      ![image](/ReadMeImages/Windows/5.png)
+      
         - Copy the https link, it should be automatically selected
         - Go back to the git bash terminal and run the command git clone https://github.com/JustinHLe/cypress-region-detection.git
+
+   ![image](/ReadMeImages/Windows/6.png)
 
 5. Install project dependencies
 
@@ -62,7 +70,12 @@ since it is the only page that has geolocation and shows content based on region
    - Window users 
         - After it is cloned it should create a new folder called cypress-region-detection
         - Go into that directory with cd cypress-region-detection
+
+   ![image](/ReadMeImages/Windows/7.png)
+   
         - Once inside the cypress-region-detection folder, type yarn install the terminal to install project dependencies
+
+   ![image](/ReadMeImages/Windows/8.png)
 
 6. Run cypress
 
@@ -74,10 +87,14 @@ since it is the only page that has geolocation and shows content based on region
         - The simplest way is to run cypress with the script already written.
         - There are three scripts you should run, these scripts will run the cypress test on chrome, firefox, and edge automatically. 
            -  yarn cy:run:chrome
+            ![image](/ReadMeImages/Windows/11.png)
            -  yarn cy:run:firefox
+              ![image](/ReadMeImages/Windows/12.png)
            -  yarn cy:run:edge
+              ![image](/ReadMeImages/Windows/13.png)
          
         -  A more manual approach would be running the script yarn cy:open which will open the test runner. 
+           ![image](/ReadMeImages/Windows/9.png)
            -  From here you can change the browser with the dropdown in the upper right hand corner, and run each test manually.
            -  Run the test by clicking on the files manually
            -  Keep in mind that YOU SHOULD ALWAYS RUN THE loadData.spec.js file first, because regionTest.spec.js is dependent on that file
