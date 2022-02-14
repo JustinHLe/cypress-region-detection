@@ -67,11 +67,16 @@ since it is the only page that has geolocation and shows content based on region
 
    - Window users 
         - There are multiple ways to run cypress. 
-        - The most simple way is to run cypress with the script already written.
+        - The simplest way is to run cypress with the script already written.
         - There are three scripts you should run, these scripts will run the cypress test on chrome, firefox, and edge automatically. 
            -  yarn cy:run:chrome
            -  yarn cy:run:firefox
            -  yarn cy:run:edge
+         
+        -  A more manual approach would be running the script yarn cy:open which will open the test runner. 
+           -  From here you can change the browser with the dropdown in the upper right hand corner, and run each test manually.
+           -  Run the test by clicking on the files manually
+           -  Keep in mind that YOU SHOULD ALWAYS RUN THE loadData.spec.js file first, because regionTest.spec.js is dependent on that file
 
 
 
