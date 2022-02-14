@@ -16,7 +16,10 @@ since it is the only page that has geolocation and shows content based on region
 
 1. Install Git
 
-   - Mac users should already have git installed
+   - Mac users 
+      - Skip to step 2 and open the terminal first
+      - Install homebrew, open the terminal and type /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      - then do brew install git
 
    - Window users
       -  Go to this link, https://git-scm.com/download/win, and install the most latest version of Git for windows.
@@ -38,7 +41,7 @@ since it is the only page that has geolocation and shows content based on region
 3. make a directory 
 
    - Mac users 
-        - open spotlight search with [command + space] and search for terminal and click on the first result(Terminal)
+        - Follow window instructions
 
    - Window users 
         - Run command mkdir [directory name]. The directory name can by anyting you like.
@@ -50,7 +53,7 @@ since it is the only page that has geolocation and shows content based on region
 4. Clone the repository
 
    - Mac users 
-        - open spotlight search with [command + space] and search for terminal and click on the first result(Terminal)
+        - Follow window instructions
 
    - Window users 
         - Go to https://github.com/JustinHLe/cypress-region-detection, click the GREEN Code button in the right corner of the screen
@@ -65,7 +68,7 @@ since it is the only page that has geolocation and shows content based on region
 5. Install project dependencies
 
    - Mac users 
-        - open spotlight search with [command + space] and search for terminal and click on the first result(Terminal)
+        - Follow window instructions
 
    - Window users 
         - After it is cloned it should create a new folder called cypress-region-detection
@@ -80,7 +83,7 @@ since it is the only page that has geolocation and shows content based on region
 6. Run cypress
 
    - Mac users 
-        - open spotlight search with [command + space] and search for terminal and click on the first result(Terminal)
+        - Follow window instructions
 
    - Window users 
         - There are multiple ways to run cypress. 
