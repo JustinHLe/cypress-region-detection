@@ -21,6 +21,8 @@ since it is the only page that has geolocation and shows content based on region
    - Window users
       -  Go to this link, https://git-scm.com/download/win, and install the most latest version of Git for windows.
       -  Open the installer and follow the instructions. (You don't have to change anything if prompted to, just hit next throughout the installation).
+      
+      ![image][/ReadMeImages/Windows/1.png]
 
 2. Open command line 
    
@@ -31,7 +33,7 @@ since it is the only page that has geolocation and shows content based on region
         - If Git is installed correctly open the search bar in the taskbar and search for git bash.
         - Open the application git bash.
 
-   ![Image][/ReadMeImages/Windows/2.png]
+   ![image][/ReadMeImages/Windows/2.png]
 
 3. make a directory 
 
