@@ -49,7 +49,7 @@ since it is the only page that has geolocation and shows content based on region
         ![Image](/ReadMeImages/Mac/5.png)
 
    - Window users 
-        - Run command mkdir [directory name]. The directory name can by anyting you like.
+        - Run command mkdir [directory name]. The directory name can by anything you like.
          ![image](/ReadMeImages/Windows/3.PNG)
         - Go into the directory you just created with cd [directory name]. 
         
