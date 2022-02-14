@@ -31,7 +31,7 @@ since it is the only page that has geolocation and shows content based on region
         - If Git is installed correctly open the search bar in the taskbar and search for git bash.
         - Open the application git bash.
 
-
+   ![Image][/ReadMeImages/Windows/2.png]
 
 3. make a directory 
 
