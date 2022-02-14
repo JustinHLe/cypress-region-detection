@@ -45,7 +45,7 @@ since it is the only page that has geolocation and shows content based on region
          ![image](/ReadMeImages/Windows/3.PNG)
         - Go into the directory you just created with cd [directory name]. 
         
-         ![image](/ReadMeImages/Windows/4.PNG)
+        ![image](/ReadMeImages/Windows/4.PNG)
 
 4. Clone the repository
 
