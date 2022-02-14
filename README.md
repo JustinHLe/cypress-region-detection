@@ -19,7 +19,9 @@ since it is the only page that has geolocation and shows content based on region
    - Mac users 
       - Skip to step 2 and open the terminal first
       - Install homebrew, open the terminal and type /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      ![Image](/ReadMeImages/Mac/1.png)
       - then do brew install git
+      ![Image](/ReadMeImages/Mac/2.png)
 
    - Window users
       -  Go to this link, https://git-scm.com/download/win, and install the most latest version of Git for windows.
@@ -31,6 +33,7 @@ since it is the only page that has geolocation and shows content based on region
    
    - Mac users 
         - open spotlight search with [command + space] and search for terminal and click on the first result(Terminal)
+  ![Image](/ReadMeImages/Mac/3.png)
 
    - Window users 
         - If Git is installed correctly open the search bar in the taskbar and search for git bash.
