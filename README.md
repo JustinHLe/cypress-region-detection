@@ -22,7 +22,7 @@ since it is the only page that has geolocation and shows content based on region
       -  Go to this link, https://git-scm.com/download/win, and install the most latest version of Git for windows.
       -  Open the installer and follow the instructions. (You don't have to change anything if prompted to, just hit next throughout the installation).
       
-      ![Image](/ReadMeImages/Windows/1.png)
+      ![Image](/ReadMeImages/Windows/1.PNG)
 
 2. Open command line 
    
