@@ -42,9 +42,10 @@ since it is the only page that has geolocation and shows content based on region
 
    - Window users 
         - Run command mkdir [directory name]. The directory name can by anyting you like.
-        - Go into the directory you just created with cd [directory name]. 
-
       ![image](/ReadMeImages/Windows/3.PNG)
+      
+        - Go into the directory you just created with cd [directory name]. 
+      
       ![image](/ReadMeImages/Windows/4.PNG)
 
 4. Clone the repository
@@ -86,11 +87,17 @@ since it is the only page that has geolocation and shows content based on region
         - There are multiple ways to run cypress. 
         - The simplest way is to run cypress with the script already written.
         - There are three scripts you should run, these scripts will run the cypress test on chrome, firefox, and edge automatically. 
+        
            -  yarn cy:run:chrome
-            ![image](/ReadMeImages/Windows/11.PNG)
+           
+              ![image](/ReadMeImages/Windows/11.PNG)
+            
            -  yarn cy:run:firefox
+           
               ![image](/ReadMeImages/Windows/12.PNG)
+             
            -  yarn cy:run:edge
+           
               ![image](/ReadMeImages/Windows/13.PNG)
          
         -  A more manual approach would be running the script yarn cy:open which will open the test runner. 
