@@ -101,26 +101,21 @@ since it is the only page that has geolocation and shows content based on region
       
    - Window users 
         - There are multiple ways to run cypress. 
-        - The simplest way is to run cypress with the script already written.
-        - There are three scripts you should run, these scripts will run the cypress test on chrome, firefox, and edge automatically. 
-        
-           -  yarn cy:run:chrome
-           
-              ![image](/ReadMeImages/Windows/11.PNG)
-            
-           -  yarn cy:run:firefox
-           
-              ![image](/ReadMeImages/Windows/12.PNG)
-             
-           -  yarn cy:run:edge
-           
-              ![image](/ReadMeImages/Windows/13.PNG)
          
         -  A more manual approach would be running the script yarn cy:open which will open the test runner. 
            ![image](/ReadMeImages/Windows/9.PNG)
            -  From here you can change the browser with the dropdown in the upper right hand corner, and run each test manually.
            -  Run the test by clicking on the files manually
-           -  Keep in mind that YOU SHOULD ALWAYS RUN THE loadData.spec.js file first, because regionTest.spec.js is dependent on that file
+           -  Keep in mind that YOU SHOULD ALWAYS RUN THE loadData.spec.js file first, because regionTest.spec.js is dependent on that file.
+              All the tests are in the regionTest.spec.js file, the loadData.spec.js file is used to gather data from an API. 
+              
+           - The regionTest.spec.js file will test individual country and is split up between 3 different blocks of test. 
+              - The first test, Test Deny access to product page, verifies that the France popup is shown and the user cannot access the product page
+              - The second test, Test that user has full acess to product page without popups, verifies that users from those countries have full access to the 
+                product page and no popup is shown.
+              - The third test, Test that HCP popup is shown, verifies that HCP popup is shown. 
+
+
 
 
 
