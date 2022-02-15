@@ -29,6 +29,9 @@ describe('Test Deny access to product page', () => {
         cy.wait("@countryName").then(data => {
             cy.log(data.response.body)
         })
+        cy.wait("@ipIntercept").then(data => {
+            cy.log(data.response.body)
+        })
         cy.get('#popup-France').should('be.visible')
     })
 })
@@ -52,6 +55,9 @@ describe("Test that user has full access to product page without popups", () => 
             cy.clearLocalStorage()
             cy.visit('/Products')
             cy.wait("@countryName").then(data => {
+                cy.log(data.response.body)
+            })
+            cy.wait("@ipIntercept").then(data => {
                 cy.log(data.response.body)
             })
             cy.get('#popup-HCP').should('not.be.visible')
@@ -78,6 +84,9 @@ describe('Test that HCP popup is shown', () => {
             cy.clearLocalStorage()
             cy.visit('/Products')
             cy.wait("@countryName").then(data => {
+                cy.log(data.response.body)
+            })
+            cy.wait("@ipIntercept").then(data => {
                 cy.log(data.response.body)
             })
             cy.get('#popup-HCP').should('be.visible')
