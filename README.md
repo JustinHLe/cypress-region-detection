@@ -9,7 +9,7 @@ may be restricted to content as opposed to a user from the Netherlands. This can
 different regions. To simplify the process of testing we utilized cypress. Cypress is basically a javascript tool that can automate and create tests that simulate an 
 actual human being.
 
-Currently, the only page that is being tested is the product page, (https://appliedmedical.eu/) 
+Currently, the only page that is being tested is the product page, (https://appliedmedical.eu/Products) 
 since it is the only page that has geolocation and shows content based on region. 
 
 # Installation
