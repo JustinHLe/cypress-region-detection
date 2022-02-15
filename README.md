@@ -92,12 +92,6 @@ since it is the only page that has geolocation and shows content based on region
 
    - Mac users 
         - Follow window instructions
-
-      ![Image](/ReadMeImages/Mac/9.png)
-
-      ![Image](/ReadMeImages/Mac/10.png)
-      
-      ![Image](/ReadMeImages/Mac/11.png)
       
    - Window users 
         - There are multiple ways to run cypress. 
