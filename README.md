@@ -14,100 +14,57 @@ since it is the only page that has geolocation and shows content based on region
 
 # Installation
 
-# 1. Install Git
+# 1. Install Cypress
 
+   - Window and Mac users 
+      - Click on the link and open the zip folder. 
+      - https://download.cypress.io/desktop
+     
    - Mac users 
-      - Skip to step 2 and open the terminal first
-      - Install homebrew, open the terminal and type /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-      ![Image](/ReadMeImages/Mac/1.png)
-      - then do brew install git
-      ![Image](/ReadMeImages/Mac/2.png)
-
+      -  After installing double click the .zip folder in the downloads folder to install cypress
+     
    - Window users
-      -  Go to this link, https://git-scm.com/download/win, and install the most latest version of Git for windows.
-      -  Open the installer and follow the instructions. (You don't have to change anything if prompted to, just hit next throughout the installation).
-      
-      ![Image](/ReadMeImages/Windows/1.PNG)
-
-# 2. Open command line 
+      -  Right click on the cypress zip file and click on extract all
+      -  Wait for the extraction to complete
+      -  After it is finished extracting double click into the cypress folder
    
-   - Mac users 
-        - open spotlight search with [command + space] and search for terminal and click on the first result(Terminal)
-  ![Image](/ReadMeImages/Mac/3.png)
-
-   - Window users 
-        - If Git is installed correctly open the search bar in the taskbar and search for git bash.
-        - Open the application git bash.
-
-   ![image](/ReadMeImages/Windows/2.png)
-
-# 3. Make a directory 
-
-   - Mac users 
-        - Follow window instructions
-        ![Image](/ReadMeImages/Mac/4.png)
-        ![Image](/ReadMeImages/Mac/5.png)
-
-   - Window users 
-        - Run command mkdir [directory name]. The directory name can by anything you like.
-         ![image](/ReadMeImages/Windows/3.PNG)
-        - Go into the directory you just created with cd [directory name]. 
-        
-        ![image](/ReadMeImages/Windows/4.PNG)
-
-# 4. Clone the repository
-
-   - Mac users 
-        - Follow window instructions
-         ![Image](/ReadMeImages/Mac/6.png)
-
-   - Window users 
-        - Go to https://github.com/JustinHLe/cypress-region-detection, click the GREEN Code button in the right corner of the screen
-
-      ![image](/ReadMeImages/Windows/5.PNG)
-      
-        - Copy the https link, it should be automatically selected
-        - Go back to the git bash terminal and run the command git clone https://github.com/JustinHLe/cypress-region-detection.git
-
-   ![image](/ReadMeImages/Windows/6.PNG)
-
-# 5. Install project dependencies
-
-   - Mac users 
-        - Follow window instructions
-        ![Image](/ReadMeImages/Mac/7.png)
-        ![Image](/ReadMeImages/Mac/8.png)
-
-   - Window users 
-        - After it is cloned it should create a new folder called cypress-region-detection
-        - Go into that directory with cd cypress-region-detection
-
-   ![image](/ReadMeImages/Windows/7.PNG)
+# 2. Open Cypress
    
-  - Once inside the cypress-region-detection folder, type yarn install the terminal to install project dependencies
+   - Mac users
+      - The cypress application should be automatically created in the same folder as the cypress zip file - double click the application to open it.
+      - The logo should be a black circle with cy in the middle.
+     
+   - Window users
+      - If you don't have the cypress folder already open, open the cypress folder, it should be in the Downloads directory
+      - Once the cypress folder is open, double click on the cypress application. The logo should be a black circle with cy in the middle
 
-   ![image](/ReadMeImages/Windows/8.PNG)
 
-# 6. Run cypress
+# 3. Download the repository
 
-   - Mac users 
-        - Follow window instructions
-      
-   - Window users 
-        - There are multiple ways to run cypress. 
-         
-        -  A more manual approach would be running the script yarn cy:open which will open the test runner. 
-           ![image](/ReadMeImages/Windows/9.PNG)
-           -  From here you can change the browser with the dropdown in the upper right hand corner, and run each test manually.
-           -  Run the test by clicking on the files manually
-           -  Keep in mind that YOU SHOULD ALWAYS RUN THE loadData.spec.js file first, because regionTest.spec.js is dependent on that file.
-              All the tests are in the regionTest.spec.js file, the loadData.spec.js file is used to gather data from an API. 
-              
-           - The regionTest.spec.js file will test individual country and is split up between 3 different blocks of test. 
-              - The first test, Test Deny access to product page, verifies that the France popup is shown and the user cannot access the product page
-              - The second test, Test that user has full acess to product page without popups, verifies that users from those countries have full access to the 
-                product page and no popup is shown.
-              - The third test, Test that HCP popup is shown, verifies that HCP popup is shown. 
+   - YOU SHOULD ALWAYS DOWNLOAD THIS REPOSITORY EVERYTIME YOU RUN CYPRESS TESTS IN CASE OF UPDATES
+   - If you have cypress opened correctly. The cypress application should be looking for a project
+   - Download the project by clicking on the link below
+   - https://github.com/AppliedTechnologyServices/applied-surgeon-portal/archive/refs/heads/master.zip
+   - Similarly the file must be extracted after downloading the project, repeat step 1 except with the project zip instead of the cypress zip
+
+
+# 4. Launch the project
+   
+   - After the project has been extracted. Drag and drop the project folder into the cypress application, this should load the project
+   - If successfully launched you should see two test files - loadData.spec.js and regionTest.spec.js
+
+# 5. Run tests
+  
+   - You should always run these tests sequentially. Always click on the loadData.spec.js file first to load all the data needed to test each region
+   - Once the test loadData.spec.js file is completed run the regionTest.spec.js file
+
+# 6. Explanation
+
+   - The loadData.spec.js file queries data from an API in order to get an IP from each country. Nothing should be tested in that file, if an error occurs in the 
+   loadData.spec.js file close the test and reopen it. If the error is persistent, please notify me
+   - The regionTest.spec.js file will test appliedmedical.eu/products. If an error occurs please screenshot the error of the test that failed and notify me
+
+
 
 
 
