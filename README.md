@@ -41,7 +41,6 @@ since it is the only page that has geolocation and shows content based on region
 
 # 3. Download the repository
 
-   - YOU SHOULD ALWAYS DOWNLOAD THIS REPOSITORY EVERYTIME YOU RUN CYPRESS TESTS IN CASE OF UPDATES
    - If you have cypress opened correctly. The cypress application should be looking for a project
    - Download the project by clicking on the link below
    - https://github.com/AppliedTechnologyServices/applied-surgeon-portal/archive/refs/heads/master.zip
