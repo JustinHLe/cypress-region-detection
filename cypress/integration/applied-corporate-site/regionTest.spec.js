@@ -9,8 +9,8 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false
 })
 
-describe('Test Deny access to product page', () => {
-    it("Denys access to product page", () => {
+describe('France popup', () => {
+    it("France popup", () => {
         cy.intercept(
             "GET",
             "https://icanhazip.com",
@@ -33,6 +33,18 @@ describe('Test Deny access to product page', () => {
             cy.log(data.response.body)
         })
         cy.get('#popup-France').should('be.visible')
+        cy.get('.yes-checkbox').should('be.visible').click()
+        cy.get('#popup-France').should('not.be.visible')
+
+        cy.reload()
+        cy.clearCookies()
+        cy.clearLocalStorage()
+
+        cy.get('#popup-France').should('be.visible')
+        cy.get('.no-checkbox').should('be.visible').click()
+        cy.location().should(loc => {
+            expect(loc.host).to.eq('appliedmedical.eu')
+        })
     })
 })
 
@@ -79,10 +91,22 @@ describe('Test that HCP popup is shown', () => {
                 "GET",
                 /.*(GeoLocation\/GetCountry).*/,
             ).as('countryName')
+            cy.intercept(
+                "GET",
+                /.*(GeoLocation\/AllowProductAccess).*/,
+                {
+                    body: {
+                        Allow: true
+                    }
+                }
+            ).as('allow')
 
             cy.clearCookies()
             cy.clearLocalStorage()
             cy.visit('/Products')
+            cy.wait("@allow").then(data => {
+                cy.log(data.response.body.Allow)
+            })
             cy.wait("@countryName").then(data => {
                 cy.log(data.response.body)
             })
