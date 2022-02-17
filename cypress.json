@@ -1,5 +1,5 @@
 {
-    "baseUrl": "https://appliedmedical.eu",
+    "baseUrl": "https://corpstaging.appliedmedical.eu",
     "ignoreTestFiles": ["**/1-getting-started/*.js", "**/2-advanced-examples/*.js"],
     "experimentalInteractiveRunEvents": true
 }

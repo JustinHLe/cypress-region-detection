@@ -35,6 +35,9 @@ describe('France popup', () => {
         cy.get('#popup-France').should('be.visible')
         cy.get('.yes-checkbox').should('be.visible').click()
         cy.get('#popup-France').should('not.be.visible')
+        cy.location().should(loc => {
+            expect(loc.pathname).to.eq('/Products')
+        })
 
         cy.reload()
         cy.clearCookies()
@@ -43,7 +46,7 @@ describe('France popup', () => {
         cy.get('#popup-France').should('be.visible')
         cy.get('.no-checkbox').should('be.visible').click()
         cy.location().should(loc => {
-            expect(loc.host).to.eq('appliedmedical.eu')
+            expect(loc.host).to.eq('corpstaging.appliedmedical.eu')
         })
     })
 })
