@@ -94,22 +94,19 @@ describe('Test that HCP popup is shown', () => {
                 "GET",
                 /.*(GeoLocation\/GetCountry).*/,
             ).as('countryName')
-            cy.intercept(
-                "GET",
-                /.*(GeoLocation\/AllowProductAccess).*/,
-                {
-                    body: {
-                        Allow: true
-                    }
-                }
-            ).as('allow')
+            // cy.intercept(
+            //     "GET",
+            //     /.*(GeoLocation\/AllowProductAccess).*/,
+            //     {
+            //         body: {
+            //             Allow: true
+            //         }
+            //     }
+            // ).as('allow')
 
             cy.clearCookies()
             cy.clearLocalStorage()
             cy.visit('/Products')
-            cy.wait("@allow").then(data => {
-                cy.log(data.response.body.Allow)
-            })
             cy.wait("@countryName").then(data => {
                 cy.log(data.response.body)
             })
