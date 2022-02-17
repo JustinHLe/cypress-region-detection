@@ -45,7 +45,7 @@ since it is the only page that has geolocation and shows content based on region
    - Download the project by clicking on the link below
    - https://github.com/AppliedTechnologyServices/applied-surgeon-portal/archive/refs/heads/master.zip
    - Similarly the file must be extracted after downloading the project, repeat step 1 except with the project zip instead of the cypress zip
-
+   - Note: YOU SHOULD ALWAYS CHECK THE REPOSITORY FOR UPDATES. IF YOU NOTICE THAT FILES HAVE BEEN CHANGED RECENTLY THEN YOU MUST REDOWNLOAD THE REPOSITORY.
 
 # 4. Launch the project
    
