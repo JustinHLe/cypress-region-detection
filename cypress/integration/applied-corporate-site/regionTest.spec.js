@@ -76,6 +76,9 @@ describe("Test that user has full access to product page without popups", () => 
                 cy.log(data.response.body)
             })
             cy.get('#popup-HCP').should('not.be.visible')
+            cy.location().should(loc => {
+                expect(loc.pathname).to.eq('/Products')
+            })
         })
     })
 })
@@ -114,6 +117,9 @@ describe('Test that HCP popup is shown', () => {
                 cy.log(data.response.body)
             })
             cy.get('#popup-HCP').should('be.visible')
+            cy.location().should(loc => {
+                expect(loc.pathname).to.eq('/Products')
+            })
         })
     })
 })
