@@ -10,7 +10,12 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 })
 
 describe('France popup', () => {
-    it("France popup", () => {
+    beforeEach(()=>{
+        cy.window().then((win) => {
+            win.sessionStorage.clear()
+          })
+    })
+    it("Tests Yes on France popup", () => {
         cy.intercept(
             "GET",
             "https://icanhazip.com",
@@ -38,11 +43,30 @@ describe('France popup', () => {
         cy.location().should(loc => {
             expect(loc.pathname).to.eq('/Products')
         })
+    })
 
-        cy.reload()
+    it("Tests No on France popup", () => {
+        cy.intercept(
+            "GET",
+            "https://icanhazip.com",
+            {
+                body: '2.0.0.0'
+            }
+        ).as('ipIntercept')
+        cy.intercept(
+            "GET",
+            /.*(GeoLocation\/GetCountry).*/,
+        ).as('countryName')
+
         cy.clearCookies()
         cy.clearLocalStorage()
-
+        cy.visit('/Products')
+        cy.wait("@countryName").then(data => {
+            cy.log(data.response.body)
+        })
+        cy.wait("@ipIntercept").then(data => {
+            cy.log(data.response.body)
+        })
         cy.get('#popup-France').should('be.visible')
         cy.get('.no-checkbox').should('be.visible').click()
         cy.location().should(loc => {
@@ -52,6 +76,11 @@ describe('France popup', () => {
 })
 
 describe("Test that user has full access to product page without popups", () => {
+    beforeEach(()=>{
+        cy.window().then((win) => {
+            win.sessionStorage.clear()
+          })
+    })
     NonHCPCountryData.countries.forEach(item => {
         it(`testing ${item.country}`, () => {
             cy.intercept(
@@ -84,6 +113,11 @@ describe("Test that user has full access to product page without popups", () => 
 })
 
 describe('Test that HCP popup is shown', () => {
+    beforeEach(()=>{
+        cy.window().then((win) => {
+            win.sessionStorage.clear()
+          })
+    })
     HCPCountryData.countries.forEach(item => {
         it(`testing ${item.country}`, () => {
             cy.intercept(
@@ -97,15 +131,10 @@ describe('Test that HCP popup is shown', () => {
                 "GET",
                 /.*(GeoLocation\/GetCountry).*/,
             ).as('countryName')
-            // cy.intercept(
-            //     "GET",
-            //     /.*(GeoLocation\/AllowProductAccess).*/,
-            //     {
-            //         body: {
-            //             Allow: true
-            //         }
-            //     }
-            // ).as('allow')
+            cy.intercept(
+                "GET",
+                /.*(GeoLocation\/AskIfHCP).*/,
+            ).as('hcp')
 
             cy.clearCookies()
             cy.clearLocalStorage()
@@ -116,7 +145,12 @@ describe('Test that HCP popup is shown', () => {
             cy.wait("@ipIntercept").then(data => {
                 cy.log(data.response.body)
             })
+            cy.wait("@hcp").then(data => {
+                cy.log(data.response.body)
+            })
             cy.get('#popup-HCP').should('be.visible')
+            cy.get('.checkbox-checkmark').click()
+            cy.get('#popup-HCP').should('not.be.visible')
             cy.location().should(loc => {
                 expect(loc.pathname).to.eq('/Products')
             })
