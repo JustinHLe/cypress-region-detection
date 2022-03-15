@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:version": "yarn cypress --version",
     "cy:open": "yarn cypress open",
+    "cy:run": "yarn cypress run",
     "cy:run:chrome": "yarn cypress run --headed --browser chrome",
     "cy:run:firefox": "yarn cypress run --headed --browser firefox",
     "cy:run:edge": "yarn cypress run --headed --browser edge"
